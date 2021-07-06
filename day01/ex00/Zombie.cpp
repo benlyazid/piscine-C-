@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phone_book.hpp                                     :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/05 10:29:48 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/07/06 10:32:43 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/07/06 10:04:08 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/07/06 13:49:30 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONE_BOOK
+#include "Zombie.hpp"
 
-#define PHONE_BOOK
-
-#include "contact.hpp"
-
-#define SIZE 8
-class Phone_book
+void	Zombie::announce(void)
 {
-    private:
+    std::cout << name << " BraiiiiiiinnnzzzZ..." << std::endl;
+}
 
-        contact my_contact[SIZE];
-        int     index;
+Zombie::Zombie()
+{
 
-    public:
+}
 
-        Phone_book();
-        void    add(void);
-		void	print_10_chart_from_string(std::string str);
-        void    serach();
-};
+Zombie::~Zombie(void)
+{
+    std::cout << "The Zombie <" << name << "> Was Deleted\n";
+}
 
-#endif
+Zombie* newZombie( std::string name)
+{
+    Zombie *z = new Zombie();
+    z->set_name(name);
+    return (z);
+}
+
+void	Zombie::set_name(std::string name)
+{
+    this->name = name;
+}

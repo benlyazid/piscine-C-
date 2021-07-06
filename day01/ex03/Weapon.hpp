@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phone_book.hpp                                     :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/05 10:29:48 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/07/06 10:32:43 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/07/06 15:28:31 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/07/06 17:11:07 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONE_BOOK
+#ifndef WEAPON_H
+#define WEAPON_H
+#include <string>
+#include <iostream>
 
-#define PHONE_BOOK
-
-#include "contact.hpp"
-
-#define SIZE 8
-class Phone_book
+class Weapon
 {
     private:
-
-        contact my_contact[SIZE];
-        int     index;
-
-    public:
-
-        Phone_book();
-        void    add(void);
-		void	print_10_chart_from_string(std::string str);
-        void    serach();
+        std::string type;
+	public:
+		const std::string &getType(void);
+		void	setType(std::string type);
+		Weapon(std::string type);
+		Weapon() {};
 };
 
 #endif

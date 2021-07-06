@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phone_book.hpp                                     :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/05 10:29:48 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/07/06 10:32:43 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/07/06 16:50:11 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/07/06 17:22:51 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONE_BOOK
+#include "HumanA.hpp"
 
-#define PHONE_BOOK
-
-#include "contact.hpp"
-
-#define SIZE 8
-class Phone_book
+void HumanA::attack()
 {
-    private:
+    std::cout << name << "attacks with his " << weapon->getType() << std::endl;
+}
 
-        contact my_contact[SIZE];
-        int     index;
-
-    public:
-
-        Phone_book();
-        void    add(void);
-		void	print_10_chart_from_string(std::string str);
-        void    serach();
-};
-
-#endif
+HumanA::HumanA(std::string name, Weapon &weapon)
+{
+    this->name = name;
+    this->weapon = &weapon;
+}

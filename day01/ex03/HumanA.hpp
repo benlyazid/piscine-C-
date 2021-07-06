@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phone_book.hpp                                     :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/05 10:29:48 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/07/06 10:32:43 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/07/06 16:42:07 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/07/06 17:22:42 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONE_BOOK
+#ifndef HUMANA_H
+#define HUMANA_H
 
-#define PHONE_BOOK
+#include "Weapon.hpp"
 
-#include "contact.hpp"
-
-#define SIZE 8
-class Phone_book
+class HumanA
 {
     private:
-
-        contact my_contact[SIZE];
-        int     index;
+		Weapon	*weapon;
+		std::string name;
 
     public:
-
-        Phone_book();
-        void    add(void);
-		void	print_10_chart_from_string(std::string str);
-        void    serach();
+        HumanA(std::string name, Weapon &weapon);
+		void attack();	
 };
+
 
 #endif
