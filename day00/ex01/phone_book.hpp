@@ -6,7 +6,7 @@
 /*   By: kbenlyaz <kbenlyaz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 10:29:48 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/07/05 15:19:19 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/07/06 09:30:18 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,26 @@ class phone_book
         {
             index = index % SIZE;
             contact new_contact;
-            std::cout << "PLEASE ENTER FIRST_NAME " << std::endl;
-            std::cin >> new_contact.first_name;
-            std::cout << "PLEASE ENTER LAST_NAME " << std::endl;
-            std::cin >> new_contact.last_name;
-            std::cout << "PLEASE ENTER NICK_NAME " << std::endl;
-            std::cin >> new_contact.nick_name;
-            std::cout << "PLEASE ENTER PHONE_NUMBER " << std::endl;
-            std::cin >> new_contact.phone_number;
+
+            std::cout << "PLEASE ENTER FIRST_NAME" << std::endl;
+            std::cin.ignore();
+            std::getline(std::cin, new_contact.first_name);
+                
+            std::cout << "PLEASE ENTER LAST_NAME" << std::endl;
+            std::cin.ignore();
+            getline(std::cin, new_contact.last_name);
+
+            std::cout << "PLEASE ENTER NICK_NAME" << std::endl;
+            std::cin.ignore();
+            getline(std::cin, new_contact.nick_name);
+
+            std::cout << "PLEASE ENTER PHONE_NUMBER" << std::endl;
+            std::cin.ignore();
+            getline(std::cin, new_contact.phone_number);
+        
             std::cout << "PLEASE ENTER DARKSET_SECRET" << std::endl;
-            std::cin >> new_contact.darkest_secret;
+            std::cin.ignore();
+            getline(std::cin, new_contact.darkest_secret);
             my_contact[index] = new_contact;
             index++;   
         }
