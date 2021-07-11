@@ -6,13 +6,13 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 10:29:48 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/07/06 10:32:43 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/07/08 11:25:05 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONE_BOOK
+#ifndef PHONE_BOOK_HPP
 
-#define PHONE_BOOK
+#define PHONE_BOOK_HPP
 
 #include "contact.hpp"
 

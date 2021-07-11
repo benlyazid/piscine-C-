@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/06 16:50:11 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/07/07 08:47:35 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/07/08 17:05:20 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/07/11 13:30:44 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
+#include "Karen.hpp"
 
-void HumanA::attack()
+int main()
 {
-    // std::cout << name << "attacks with his " << weapon->getType() << std::endl;
-    std::cout << name << "attacks with his " << weapon->getType() << std::endl;
-}
-
-HumanA::HumanA(std::string name, Weapon &weapon)
-{
-    this->name = name;
-    this->weapon = &weapon;
+    Karen k;
+    k.complain("DEBUG");
+    k.complain("INFO");
+    k.complain("WARNNG");
+    k.complain("ERROR");
 }

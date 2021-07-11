@@ -6,14 +6,14 @@
 #    By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/05 09:41:11 by kbenlyaz          #+#    #+#              #
-#    Updated: 2021/07/07 09:50:57 by kbenlyaz         ###   ########.fr        #
+#    Updated: 2021/07/07 16:27:18 by kbenlyaz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Unnecessary_violence
+NAME = replace
 
-SRC =  HumanA.cpp HumanB.cpp Weapon.cpp main.cpp
-OBJ =  HumanA.o HumanB.o Weapon.o main.o
+SRC =  main.cpp
+OBJ =  main.o
 
 all : $(NAME)
 

@@ -6,12 +6,12 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 09:43:05 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/07/06 13:33:15 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/07/08 11:25:18 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_H
-#define ZOMBIE_H
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 #include <string>
 #include <iostream>
 

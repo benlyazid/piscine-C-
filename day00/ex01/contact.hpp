@@ -6,13 +6,13 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 10:29:48 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/07/06 14:13:11 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/07/08 11:24:22 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_H
+#ifndef CONTACT_HPP
 
-#define CONTACT_H
+#define CONTACT_HPP
 
 #include <string>
 #include <iostream>

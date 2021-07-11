@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/06 16:50:11 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/07/07 08:47:35 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/07/11 15:56:12 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/07/11 19:12:46 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
+#ifndef FIXED_H
 
-void HumanA::attack()
-{
-    // std::cout << name << "attacks with his " << weapon->getType() << std::endl;
-    std::cout << name << "attacks with his " << weapon->getType() << std::endl;
-}
+#define FIXED_H
 
-HumanA::HumanA(std::string name, Weapon &weapon)
+#include <iostream>
+
+class Fixed
 {
-    this->name = name;
-    this->weapon = &weapon;
-}
+	private:
+		int	point_value;
+		static const int number_of_fractional_bits = 8;
+		
+	public:
+		Fixed();
+		~Fixed();
+		Fixed& operator=(const Fixed &fixed);
+		Fixed(const Fixed &fixed);
+		int getRawBits( void ) const;
+		void setRawBits( int const raw );
+};
+
+#endif

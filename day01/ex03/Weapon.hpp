@@ -6,12 +6,12 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 15:28:31 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/07/06 17:11:07 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/07/08 11:25:36 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_H
-#define WEAPON_H
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 #include <string>
 #include <iostream>
 

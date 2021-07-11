@@ -6,12 +6,12 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 16:42:07 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/07/06 17:22:42 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/07/08 11:25:24 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_H
-#define HUMANA_H
+#ifndef HUMANA_HPP
+#define HUMANA_HPP
 
 #include "Weapon.hpp"
 
