@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/11 15:56:12 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/04 11:15:32 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/09/05 14:18:00 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/09/05 15:15:19 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_H
-
-#define FIXED_H
-
-#include <iostream>
-
-class Fixed
+#ifndef FRAGTRAP
+#define FRAGTRAP
+#include "ClapTrap.hpp"
+class FragTrap : public ClapTrap
 {
-	private:
-		int	point_value;
-		static const int number_of_fractional_bits = 8;
-		
-	public:
-		Fixed();
-		~Fixed();
-		Fixed& operator=(const Fixed &fixed);
-		Fixed(const Fixed &fixed);
-		int getRawBits( void ) const;
-		void setRawBits( int const raw );
+private:
+    /* data */
+public:
+    FragTrap(std::string str);
+    ~FragTrap();
+	void highFivesGuys(void);
 };
 
 #endif

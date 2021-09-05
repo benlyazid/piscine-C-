@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/11 15:56:12 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/04 11:15:32 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/09/05 10:16:28 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/09/05 14:09:28 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_H
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
-#define FIXED_H
-
-#include <iostream>
-
-class Fixed
+int main()
 {
-	private:
-		int	point_value;
-		static const int number_of_fractional_bits = 8;
-		
-	public:
-		Fixed();
-		~Fixed();
-		Fixed& operator=(const Fixed &fixed);
-		Fixed(const Fixed &fixed);
-		int getRawBits( void ) const;
-		void setRawBits( int const raw );
-};
+    ClapTrap a("seven");
+    ClapTrap b("khalid");
+	ScavTrap scave("scave_0");
+    b.attack("ENEMY");
+    b.takeDamage(25);
+    b.beRepaired(20);
 
-#endif
+	scave.attack("ENEMY_1");
+	scave.guardGate();
+	
+    return 0;
+}

@@ -6,14 +6,14 @@
 #    By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/05 09:41:11 by kbenlyaz          #+#    #+#              #
-#    Updated: 2021/09/04 14:46:48 by kbenlyaz         ###   ########.fr        #
+#    Updated: 2021/09/05 11:27:21 by kbenlyaz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = HI_THIS_IS_BRAIN
+NAME = a.out
 
-SRC = main.cpp
-OBJ = main.o
+SRC = main.cpp ClapTrap.cpp
+OBJ = main.o ClapTrap.o
 
 all : $(NAME)
 

@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/11 15:56:12 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/04 11:15:32 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/09/05 14:17:58 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/09/05 15:17:18 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_H
 
-#define FIXED_H
+#include "FragTrap.hpp"
 
-#include <iostream>
-
-class Fixed
+FragTrap::FragTrap(std::string str) : ClapTrap(str)
 {
-	private:
-		int	point_value;
-		static const int number_of_fractional_bits = 8;
-		
-	public:
-		Fixed();
-		~Fixed();
-		Fixed& operator=(const Fixed &fixed);
-		Fixed(const Fixed &fixed);
-		int getRawBits( void ) const;
-		void setRawBits( int const raw );
-};
+	set_Attack_damage(30);
+	set_Hit_points(100);
+	set_Energy_points(100);
+	std::cout << "Default constructor from FragTrap called" << std::endl;
+}
 
-#endif
+FragTrap::~FragTrap()
+{
+	 std::cout << "destructor from FragTrap called" << std::endl;
+}
+
+void FragTrap::highFivesGuys(void)
+{
+	std::cout << "positive high fives request" << std::endl;
+}

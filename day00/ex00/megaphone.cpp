@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbenlyaz <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 09:15:49 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/07/05 10:05:39 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/04 13:33:45 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main(int argc, char **argv)
 {
 	if (argc == 1)
 	{
-		std::cout << "ERROR IN ARGUMENT :(" << std::endl;
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 		return (1);
 	}
 	for (int j = 1; j < argc; j++)

@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/11 15:56:12 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/04 11:15:32 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/09/05 15:42:07 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/09/05 16:50:18 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_H
+#ifndef DIAMONDTRAP
+#define DIAMONDTRAP
 
-#define FIXED_H
+#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
-#include <iostream>
-
-class Fixed
+class DiamondTrap : private FragTrap, private ScavTrap
 {
-	private:
-		int	point_value;
-		static const int number_of_fractional_bits = 8;
-		
-	public:
-		Fixed();
-		~Fixed();
-		Fixed& operator=(const Fixed &fixed);
-		Fixed(const Fixed &fixed);
-		int getRawBits( void ) const;
-		void setRawBits( int const raw );
+private:
+	std::string Name;
+public:
+	DiamondTrap(std::string name);
+	~DiamondTrap();
 };
 
 #endif
