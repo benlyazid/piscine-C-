@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 10:16:34 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/05 11:40:03 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/06 08:42:01 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ClapTrap::ClapTrap(std::string name)
 	std::cout << "Default constructor called" << std::endl;
 	_Name = name;
 	_Energy_poits = 10;
-	_Attack_damge = 0;
+	_Attack_damage = 0;
 }
 ClapTrap::~ClapTrap()
 {
@@ -36,7 +36,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& clapTrap)
 	if (this != &clapTrap)
 	{
 		this->_Name = clapTrap._Name;
-		this->_Attack_damge = clapTrap._Attack_damge;
+		this->_Attack_damage = clapTrap._Attack_damage;
 		this->_Energy_poits = clapTrap._Energy_poits;
 	}
 	return (*this);
@@ -44,7 +44,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& clapTrap)
 
 void ClapTrap::attack(std::string const & target)
 {
-	std::cout << _Name << " Attack " << target << " causing "<< _Attack_damge << "  points of damage! "<< std::endl;	
+	std::cout << _Name << " Attack " << target << " causing "<< _Attack_damage << "  points of damage! "<< std::endl;	
 }
 
 void ClapTrap::takeDamage(unsigned int amount)

@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/05 14:18:00 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/06 08:36:52 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/09/06 11:11:16 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/09/06 17:42:33 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP
-#define FRAGTRAP
-#include "ClapTrap.hpp"
-class FragTrap : public ClapTrap
+#include <iostream>
+#include <string.h>
+#include "animal.hpp"
+
+int main()
 {
-	private:
-
-	public:
-		FragTrap(std::string str);
-		~FragTrap();
-		void highFivesGuys(void);
-};
-
-#endif
+	Animal *animal = new (Dog);
+	animal->makeSound();
+	delete animal;
+	return 0;
+}

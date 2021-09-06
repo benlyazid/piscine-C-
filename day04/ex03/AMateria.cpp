@@ -1,26 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/05 14:18:00 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/06 08:36:52 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/09/06 17:45:54 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/09/06 17:45:55 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP
-#define FRAGTRAP
-#include "ClapTrap.hpp"
-class FragTrap : public ClapTrap
-{
-	private:
-
-	public:
-		FragTrap(std::string str);
-		~FragTrap();
-		void highFivesGuys(void);
-};
-
-#endif

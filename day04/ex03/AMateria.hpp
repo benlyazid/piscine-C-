@@ -1,44 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/05 10:16:39 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/06 08:42:01 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/09/06 17:45:57 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/09/06 19:02:06 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef  CLAPTRAP
-#define CLAPTRAP
+#ifndef AMATERIA
+#define AMATERIA
 
-#include <string>
 #include <iostream>
+#include <string.h>
 
-class ClapTrap
+class AMateria
 {
 	protected:
-		std::string _Name;
-		int	_Energy_points;
-		int _Attack_damage;
-		int _Hit_points;
-
+		std::string const type;
 	public:
-		int var;
-		ClapTrap(std::string name);
-		ClapTrap& operator=(const ClapTrap& clapTrap);
-		ClapTrap(const ClapTrap& clapTrap);
-		~ClapTrap();
-
-		void attack(std::string const & target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
+		AMateria(std::string const & type);
+		std::string const & getType() const; //Returns the materia type
+		virtual AMateria* clone() const = 0;
+		virtual void use(ICharacter& target);
 };
-
-
-
 #endif
-
-
-

@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 14:17:58 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/05 16:45:50 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/06 09:22:13 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 FragTrap::FragTrap(std::string str) : ClapTrap(str)
 {
-	ClapTrap::set_Attack_damage(30);
-	ClapTrap::set_Hit_points(100);
-	ClapTrap::set_Energy_points(100);
-	std::cout << "Default constructor from FragTrap called" << std::endl;
+	_Attack_damage = 30;
+	_Hit_points = 100;
+	_Energy_points = 100;
+	std::cout << "Default constructor from FragTrap called " << std::endl;
 }
 
 FragTrap::~FragTrap()
