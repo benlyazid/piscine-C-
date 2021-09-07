@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 10:07:57 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/07/07 16:28:25 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/07 16:30:21 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ int main(int ac, char **av)
 	std::ostringstream ss;
 	ss << file.rdbuf();
 	std::string  data= ss.str();
-	std::cout << data;
 
 	std::string output = "";
 	for(int i = 0; i < (int)data.length(); i++)
@@ -58,7 +57,6 @@ int main(int ac, char **av)
 		else
 			output += data[i];
 	}	
-	std::cout << output;
 	file.close();
 	std::ofstream ofile("FILENAME.replace");
 	ofile << output;

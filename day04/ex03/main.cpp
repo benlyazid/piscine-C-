@@ -6,15 +6,39 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 11:11:16 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/06 17:45:23 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/07 17:47:07 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string.h>
+//#include "Character.hpp"
+//#include "AMateria.hpp"
 
 int main()
 {
-
+	/*IMateriaSource* src = new MateriaSource();
+	src->learnMateria(new Ice());
+	src->learnMateria(new Cure());
+	ICharacter* me = new Character("me");
+	AMateria* tmp;
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+	tmp = src->createMateria("cure");
+	me->equip(tmp);
+	ICharacter* bob = new Character("bob");
+	me->use(0, *bob);
+	me->use(1, *bob);
+	delete bob;
+	delete me;
+	delete src;*/
+	int var = 20;
+	int &ref = var;
+	int *ptr =  &var;
+	std::cout << &var << std::endl;
+	std::cout << &ref << std::endl;
+	std::cout << ptr << std::endl;
+	
+	
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 10:16:34 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/06 08:42:01 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/07 14:10:45 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,3 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 		std::cout << _Name << " Has repaired " << amount << " points! "<< std::endl;
 }
-

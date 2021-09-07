@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 14:52:56 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/06 17:39:27 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/07 12:17:34 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ class Brain
 	public:
 		Brain();
 		~Brain();
+		void set_ideas(std::string idea);
+		std::string get_ideas();
 };
 
 class Dog : public Animal
@@ -42,6 +44,9 @@ class Dog : public Animal
 	public:
 		Dog();
 		~Dog();
+		Dog(const Dog &dog);
+		void set_dog_ideas(std::string idea);
+		std::string get_dog_idea(void);
 		void makeSound() const;
 };
 
@@ -51,9 +56,11 @@ class Cat : public Animal
 		Brain *brain;
 	public:
 		Cat();
+		Cat(Cat &cat);
 		~Cat();
+		void set_cat_ideas(std::string idea);
+		std::string get_cat_idea(void);
 		void makeSound() const;
-
 };
 
 #endif

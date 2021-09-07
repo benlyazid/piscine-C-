@@ -6,14 +6,14 @@
 #    By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/05 09:41:11 by kbenlyaz          #+#    #+#              #
-#    Updated: 2021/09/07 19:09:53 by kbenlyaz         ###   ########.fr        #
+#    Updated: 2021/09/07 08:10:40 by kbenlyaz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = BraiiiiiiinnnzzzZ
+NAME = a.out
 
-SRC = Zombie.cpp main.cpp randomChump.cpp
-OBJ = Zombie.o main.o randomChump.o
+SRC = tests.cpp Account.cpp
+OBJ = tests.o Account.o
 
 all : $(NAME)
 

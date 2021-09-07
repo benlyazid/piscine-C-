@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 09:43:05 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/07/08 11:25:18 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/07 19:17:20 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ class Zombie
 		void	set_name(std::string  name);
 		Zombie();
 		~Zombie(void);
+		Zombie(std::string);
 };
 
 Zombie* newZombie( std::string name);
 Zombie* zombieHorde( int N, std::string name);
+void randomChump( std::string name);
 #endif

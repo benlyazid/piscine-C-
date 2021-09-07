@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 10:04:08 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/07/06 13:49:30 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/07 19:22:14 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,13 @@ void	Zombie::announce(void)
 
 Zombie::Zombie()
 {
+	std::cout << "default construct" << std::endl;
+}
 
+Zombie::Zombie(std::string name)
+{
+	std::cout << name << " construct with name" << std::endl;
+	this->name = name;   
 }
 
 Zombie::~Zombie(void)
@@ -29,7 +35,7 @@ Zombie::~Zombie(void)
 
 Zombie* newZombie( std::string name)
 {
-    Zombie *z = new Zombie();
+    Zombie *z = new Zombie(name);
     z->set_name(name);
     return (z);
 }

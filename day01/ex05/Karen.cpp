@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/08 11:30:39 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/07/11 13:30:16 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/07 19:44:00 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void Karen::info()
 
 void Karen::warning()
 {
-    std::cout << " think I deserve to have some extra bacon for free. I’ve beencoming here for years and you just started working here last month.\n";
+    std::cout << "I think I deserve to have some extra bacon for free. I’ve beencoming here for years and you just started working here last month.\n";
 }
 
 void Karen::error()

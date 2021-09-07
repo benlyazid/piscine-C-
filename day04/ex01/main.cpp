@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 11:11:16 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/06 16:43:16 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/07 12:19:09 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 #include <string.h>
 #include "animal.hpp"
 
+
 int main()
 {
-	size_t len_of_list = 10;
+	size_t len_of_list = 2;
 	Animal	*animal_list[len_of_list];
 	for (size_t i = 0; i < len_of_list; i++)
 	{
@@ -25,10 +26,20 @@ int main()
 		else
 			animal_list[i] = new Dog();
 	}
-
+	
 	for (size_t i = 0; i < len_of_list; i++)
 	{
 		delete animal_list[i];
 	}
-	return 0;
+
+	// ***********       test deep copy
+	Cat cat0;
+	cat0.set_cat_ideas("cat0 idea");
+	Cat cat1 = cat0;
+
+	cat1.set_cat_ideas("cat1 idea");
+	std::cout << cat0.get_cat_idea() << std::endl;
+	std::cout << cat1.get_cat_idea() << std::endl;
+	return (0);
 }
+
