@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 15:05:09 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/07 15:15:45 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/08 11:02:26 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 class ICharacter
 {
+	protected:
 	public:
 		virtual ~ICharacter() {}
 		virtual std::string const & getName() const = 0;
@@ -25,21 +26,22 @@ class ICharacter
 		virtual void use(int idx, ICharacter& target) = 0;
 };
 
-class Character : ICHARACTER
+class Character : ICharacter
 {
+	
 	private:
-		/* data */
+		const std::string &name;
+		int count;
+		AMateria *materias[4];
 	public:
-		Character(std::string type_name);
+		Character(const std::string &type_name);
+		Character(const Character &charachter);
+		Character& operator=(const Character &character);
 		~Character();
+		void equip(AMateria* m) = 0;
+		void unequip(int idx);
 };
 
-Character::Character(std::string type_name)
-{
-}
 
-Character::~Character()
-{
-}
 
 #endif

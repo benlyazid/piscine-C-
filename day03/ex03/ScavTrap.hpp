@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/05 14:18:06 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/06 09:01:02 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/09/10 18:01:38 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/09/10 18:01:39 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,11 @@ class ScavTrap : public virtual ClapTrap
     public:
         ScavTrap(std::string str);
         ~ScavTrap();
+        ScavTrap();
+        ScavTrap(ScavTrap const &scavtrap);
+        ScavTrap& operator=(ScavTrap const &scavtrap);
 	    void attack(std::string const & target);
         void guardGate();
-
 
 };
 

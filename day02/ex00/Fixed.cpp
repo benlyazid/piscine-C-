@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 16:50:48 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/07/11 19:28:28 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/10 07:33:32 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ Fixed& Fixed::operator=(const Fixed& fixed)
 int Fixed::getRawBits( void ) const
 {
     std::cout << "getRawBits constructor called\n";
-    return this->point_value;
+    return (this->point_value);
 }
 
 void Fixed::setRawBits( int const raw )

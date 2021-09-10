@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 17:45:57 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/07 15:20:26 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/08 11:46:34 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,38 @@
 
 class AMateria
 {
-	private:
+	protected:
+		const std::string  &type;
 	public:
-		AMateria(std::string const & type);
+		AMateria(std::string const &type);
+		virtual ~AMateria();
 		std::string const & getType() const; //Returns the materia type
 		virtual AMateria* clone() const = 0;
 		virtual void use(ICharacter& target);
 };
+
+class Ice : public AMateria
+{	
+	public:
+		AMateria* clone();
+		Ice();
+		Ice* clone() const;
+		~Ice();
+		void use(ICharacter& target);
+};
+
+class Cure : public AMateria
+{
+	public:
+		AMateria* clone();
+		Cure();
+		Cure* clone() const;
+		~Cure();
+		void use(ICharacter& target);
+};
+
+
+
 
 class IMateriaSource
 {
@@ -38,19 +63,11 @@ class IMateriaSource
 class MateriaSource : IMateriaSource
 {
 	private:
-		/* data */
 	public:
-		MateriaSource(/* args */);
+		MateriaSource();
 		~MateriaSource();
-		
+		void learnMateria();	
 };
-
-MateriaSource::MateriaSource(/* args */)
-{
-}
-
-MateriaSource::~MateriaSource()
-{
-}
-
 #endif
+
+//NOT FINISHE YET

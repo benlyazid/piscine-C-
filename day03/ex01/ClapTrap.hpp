@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 10:16:39 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/06 08:42:01 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/10 15:23:15 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class ClapTrap
 	public:
 		int var;
 		ClapTrap(std::string name);
+		ClapTrap();
 		ClapTrap& operator=(const ClapTrap& clapTrap);
 		ClapTrap(const ClapTrap& clapTrap);
 		~ClapTrap();

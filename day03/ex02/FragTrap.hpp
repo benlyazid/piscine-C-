@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 14:18:00 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/06 08:36:52 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/10 17:52:08 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ class FragTrap : public ClapTrap
 	public:
 		FragTrap(std::string str);
 		~FragTrap();
+		FragTrap();
+		FragTrap(const FragTrap &fragtrap);
+		FragTrap& operator=(const FragTrap &fragtrap);
 		void highFivesGuys(void);
 };
 

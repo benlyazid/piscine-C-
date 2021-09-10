@@ -6,14 +6,14 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 11:11:16 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/07 17:47:07 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/08 08:15:15 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string.h>
 //#include "Character.hpp"
-//#include "AMateria.hpp"
+#include "AMateria.hpp"
 
 int main()
 {
@@ -32,12 +32,6 @@ int main()
 	delete bob;
 	delete me;
 	delete src;*/
-	int var = 20;
-	int &ref = var;
-	int *ptr =  &var;
-	std::cout << &var << std::endl;
-	std::cout << &ref << std::endl;
-	std::cout << ptr << std::endl;
 	
 	
 	return 0;

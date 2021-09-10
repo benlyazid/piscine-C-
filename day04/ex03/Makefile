@@ -6,14 +6,14 @@
 #    By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/05 09:41:11 by kbenlyaz          #+#    #+#              #
-#    Updated: 2021/09/06 16:42:45 by kbenlyaz         ###   ########.fr        #
+#    Updated: 2021/09/08 08:35:37 by kbenlyaz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = a.out
 
-SRC = main.cpp animal.cpp
-OBJ = main.o animal.o
+SRC = main.cpp AMateria.cpp
+OBJ = main.o AMateria.o
 
 all : $(NAME)
 
