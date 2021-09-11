@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 13:43:10 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/11 08:33:52 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/11 09:52:13 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "ShrubberyCreationForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
-
+#include "Intern.hpp"
 #include <iostream>
 #include <string>
 using namespace std;
@@ -31,4 +31,10 @@ int main()
 	buo.signForm(r_form);
 	Bureaucrat exec;
 	exec.executeForm(r_form);
+	std::cout << "-------------------------------------\n";
+	Intern intern;
+	Form *f1 = intern.makeForm("PresidentialPardonForm", "tarhet");
+	buo.executeForm(*f1);
+	
+	
 }

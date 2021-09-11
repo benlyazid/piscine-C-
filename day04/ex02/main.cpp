@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 11:11:16 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/06 17:42:33 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/11 19:20:33 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 
 int main()
 {
-	Animal *animal = new (Dog);
-	animal->makeSound();
-	delete animal;
+	Animal animal;
 	return 0;
 }
+//GET OTHERS CLASS CAT AND DOG FROM EX00

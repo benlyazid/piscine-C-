@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 17:45:54 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/08 11:37:57 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/11 17:48:40 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ std::string const& AMateria::getType() const
 {
 	return (this->type);
 }
+
 
 
 
