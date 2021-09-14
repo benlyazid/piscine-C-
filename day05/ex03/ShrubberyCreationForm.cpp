@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 15:49:43 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/11 07:26:56 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/14 07:51:14 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,7 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
 }
 
 void ShrubberyCreationForm::execute(Bureaucrat const &bureaucrat) const
-{
-	
-	try
-	{	
+{	
 		Form::execute(bureaucrat);
 		std::ofstream file(target + "_shrubbery");
 		
@@ -67,11 +64,5 @@ void ShrubberyCreationForm::execute(Bureaucrat const &bureaucrat) const
 		file << "					|||" << std::endl;
 		file << "			, -=-~  .-^- _" << std::endl;
      
-		file.close();
-	}
-	catch(std::exception &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-	
+		file.close();	
 }

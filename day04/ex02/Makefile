@@ -6,14 +6,14 @@
 #    By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/05 09:41:11 by kbenlyaz          #+#    #+#              #
-#    Updated: 2021/09/06 16:42:45 by kbenlyaz         ###   ########.fr        #
+#    Updated: 2021/09/12 07:21:15 by kbenlyaz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = a.out
 
-SRC = main.cpp animal.cpp
-OBJ = main.o animal.o
+SRC = Brain.cpp Cat.cpp Dog.cpp animal.cpp main.cpp 
+OBJ = Brain.o Cat.o Dog.o animal.o main.o 
 
 all : $(NAME)
 

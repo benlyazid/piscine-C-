@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 14:52:56 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/11 19:17:23 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/12 07:25:09 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define ANIMAL
 #include <iostream>
 #include <string.h>
+#include "Brain.hpp"
 
 class Animal
 {

@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 08:16:59 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/11 08:22:48 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/13 17:01:51 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ PresidentialPardonForm::~PresidentialPardonForm ()
 {
 
 }
-
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &president) : Form(president.get_name(), president.get_grade_to_sign(), president.get_grade_to_sign()), target(president.target)
 {
@@ -51,15 +50,6 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
 
 void PresidentialPardonForm::execute(Bureaucrat const &bureaucrat) const
 {
-	
-	try
-	{	
-		Form::execute(bureaucrat);
-		std:: cout << target << " has been pardoned by Zafod Beeblebrox. " << std::endl;
-	}
-	catch(std::exception &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-	
+	Form::execute(bureaucrat);
+	std:: cout << target << " has been pardoned by Zafod Beeblebrox. " << std::endl;
 }

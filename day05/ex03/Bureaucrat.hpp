@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 12:08:46 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/11 08:35:32 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/14 07:58:25 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ class Bureaucrat
 		class EXCEPTIONE_EXECUTION_GRADE;
 		class EXCEPTIONE_EXECUTION_SIGNE;
 		class EXCEPTIONE_SIGNING;
+		class GradeTooHighException;
+		class GradeTooLowException;
 		std::string getName() const;
 		int getGrade() const;
 		void incr_grade();
@@ -39,7 +41,6 @@ class Bureaucrat
 		void signForm(Form &form);
 		int get_value() const;
 		void executeForm(Form const & form);
-		
 };
 std::ostream& operator <<(std::ostream &os, const Bureaucrat &buo);
 

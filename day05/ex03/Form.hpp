@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 18:45:05 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/11 07:47:40 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/14 07:48:18 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ class Form
 		void setGradeExec(const int grade);
 		void setGradeSign(const int grade);
 		void set_is_signed(const bool sign);
+		class GradeTooHighException;
+		class GradeTooLowException;
 };
 
 std::ostream& operator <<(std::ostream &os, Form &form);

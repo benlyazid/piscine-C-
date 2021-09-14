@@ -6,40 +6,64 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 10:07:00 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/08 11:29:23 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/12 13:50:12 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 
-
-Character::Character(const std::string &type_name) : name(type_name)
+Character::Character(const std::string &name) : name(name)
 {	
 	count = 0;
+	std::cout << "Character_Constructor" << std::endl;
+
+}
+Character::Character(Character const &charachter): name(charachter.name)
+{
+	std::cout << "Character_Copy_Constructor" << std::endl;
+	*this = charachter;
+}
+
+Character& Character::operator=(Character const &charachter)
+{
+	std::cout << "Character_Operator =" << std::endl;
+	
+	if (this != &charachter)
+	{
+
+		(std::string)name = charachter.name;
+		count = charachter.count;
+		for (size_t i = 0; i < 4; i++)
+		{
+			delete materias[i];
+			materias[i] = charachter.materias[i];
+		}
+	}
+	return (*this);
 }
 
 Character::~Character()
 {
-	for (size_t i = 0; i < count + 1; i++)
+	std::cout << "Character_Destructor" << std::endl;
+	for (int i = 0; i < count + 1; i++)
 	{
 		delete materias[i];
 	}
-	
 }
 
 void Character::equip(AMateria  *materia)
 {
-	if (count == 4)
+	if (count == 3)
 		return ;
 	materias[count] = materia;
 	count++;
-
 }
 
 void Character::unequip(int index)
 {
 	if (index >= 4)
 		return ;
+	materias[index] = NULL;
 	while (index < count)
 	{
 		materias[index] = materias[index + 1];
@@ -49,23 +73,15 @@ void Character::unequip(int index)
 	count--;
 }
 
-Character::Character(const Character &charachter) : name(charachter.name)
+std::string const &Character::getName()const
 {
-	this->count = charachter.count;
-	for (size_t i = 0; i <= charachter.count; i++)
-	{
-		delete this->materias[i];
-		this->materias[i] = charachter.materias[i];
-	}
+	return (name);
 }
 
-
-Character& Character::operator=(const Character &charachter)
+void Character::use(int idx, ICharacter&target)
 {
-	this->count = charachter.count;
-	for (size_t i = 0; i <= charachter.count; i++)
-	{
-		delete this->materias[i];
-		this->materias[i] = charachter.materias[i];
-	}
+	if (idx > count)
+		return ;
+	materias[idx]->use(target);
+	
 }

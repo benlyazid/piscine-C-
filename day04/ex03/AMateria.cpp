@@ -6,92 +6,47 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 17:45:54 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/11 17:48:40 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/12 13:00:22 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
-////////////////////////////////////////_________AMATERIA____/////////////////////////////////////////////////////////////
 AMateria::AMateria(std::string const &type) : type(type)
 {	
-	std::cout << "default AMateria_Constructor" << std::endl;
+	std::cout << "AMateria_Constructor" << std::endl;
 }
 
 AMateria::~AMateria()
 {	
 	std::cout << "AMateria_Destructor" << std::endl;
 }
+
+AMateria::AMateria(AMateria const & materia) : type(materia.type)
+{
+	std::cout << "AMateria_Copy_Constructor" << std::endl;
+	*this = materia;
+}
+
+AMateria& AMateria::operator=(AMateria const & materia)
+{
+	std::cout << "AMateria_Operator =" << std::endl;
+	if (this != &materia)
+	{
+		(std::string)type = materia.type;
+	}
+	return (*this);
+}
+
 std::string const& AMateria::getType() const
 {
 	return (this->type);
 }
 
+ void AMateria::use(ICharacter& target)
+ {
+	std::cout << "AMateria Use Function for target "<< target.getName()  << std::endl; 
+ }
 
 
 
-
-
-
-/////////////////////////////////////_________MateriaSource__/////////////////////////////////////////////////////////////
-MateriaSource::MateriaSource()
-{
-	std::cout << "default MateriaSource_Constructor" << std::endl;
-}
-
-MateriaSource::~MateriaSource()
-{
-	std::cout << "MateriaSource_Destructor" << std::endl;
-}
-
-
-
-
-
-////////////////////////////////////////_________ICE_________/////////////////////////////////////////////////////////////
-Ice::Ice() : AMateria("ice")
-{
-	std::cout << "default Ice_Constructor" << std::endl;   
-}
-
-Ice::~Ice()
-{
-	std::cout << "Ice_Destructor" << std::endl;
-}
-
-Ice* Ice::clone() const
-{
-	Ice *ice = new(Ice);
-	return ice;
-}
-
-void Ice::use(ICharacter &target)
-{
-	std::cout <<  "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
-}
-
-
-
-
-
-////////////////////////////////////////_________CURE________/////////////////////////////////////////////////////////////
-Cure::Cure() : AMateria("cure")
-{
-	std::cout << "default Cure_Constructor" << std::endl;
-}
-
-Cure::~Cure()
-{
-	std::cout << "Cure_Destructor" << std::endl;
-}
-
-Cure* Cure::clone() const
-{
-	Cure *cure = new(Cure);
-	return cure;
-}
-
-void Cure::use(ICharacter &target)
-{
-	std::cout <<  "* heals" << target.getName() << " wounds *" << std::endl;
-}

@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 18:45:05 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/09 17:59:54 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/13 15:43:17 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define FORM_H
 #include <string>
 #include <iostream>
-//#include "Bureaucrat.hpp"
+
 class Bureaucrat;
 class Form
 {
@@ -34,6 +34,8 @@ class Form
 		bool get_is_signed();
 		std::string get_name() const;
 		bool beSigned(Bureaucrat &bueucrat);
+		class GradeTooHighException;
+		class GradeTooLowException;
 };
 
 std::ostream& operator <<(std::ostream &os, Form &form);

@@ -6,14 +6,14 @@
 #    By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/05 09:41:11 by kbenlyaz          #+#    #+#              #
-#    Updated: 2021/09/08 08:35:37 by kbenlyaz         ###   ########.fr        #
+#    Updated: 2021/09/12 11:45:04 by kbenlyaz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = a.out
 
-SRC = main.cpp AMateria.cpp
-OBJ = main.o AMateria.o
+SRC = AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp main.cpp
+OBJ = AMateria.o Character.o Cure.o Ice.o MateriaSource.o main.o
 
 all : $(NAME)
 

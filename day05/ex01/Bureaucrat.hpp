@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 12:08:46 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/10 07:43:39 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/13 15:26:47 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define BUREACRAT
 
 #include <iostream>
-//#include "Form.hpp"
 class Form;
 #include <string>
 
@@ -34,7 +33,8 @@ class Bureaucrat
 		void incr_grade();
 		void decr_grade();
 		void signForm(Form &form);
-		
+		class GradeTooHighException;
+		class GradeTooLowException;
 };
 std::ostream& operator <<(std::ostream &os, const Bureaucrat &buo);
 

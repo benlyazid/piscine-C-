@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 08:16:59 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/11 08:30:59 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/13 17:02:24 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,17 +51,7 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm &r
 
 void RobotomyRequestForm::execute(Bureaucrat const &bureaucrat) const
 {
-	
-	try
-	{	
-		Form::execute(bureaucrat);
-
-		std::cout << "drilling noises : venvenvenvenvenvenvenvenvenvenvenven...venven" << std::endl;
-		std:: cout << target << " has been robotomized successfully 50\% of the time " << std::endl;
-	}
-	catch(std::exception &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-	
+	Form::execute(bureaucrat);
+	std::cout << "drilling noises : venvenvenvenvenvenvenvenvenvenvenven...venven" << std::endl;
+	std:: cout << target << " has been robotomized successfully 50\% of the time " << std::endl;	
 }

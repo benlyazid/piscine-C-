@@ -6,7 +6,7 @@
 #    By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/05 09:41:11 by kbenlyaz          #+#    #+#              #
-#    Updated: 2021/09/09 15:46:26 by kbenlyaz         ###   ########.fr        #
+#    Updated: 2021/09/14 07:43:49 by kbenlyaz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ OBJ = Bureaucrat.o Form.o PresidentialPardonForm.o RobotomyRequestForm.o Shrubbe
 all : $(NAME)
 
 $(NAME) : $(SRC)
-		@clang++ -Wall -Wextra -Werror -Wshadow -Wno-shadow $(SRC) -c
+		@clang++ -Wall -Wextra -Werror $(SRC) -c
 		@clang++ $(OBJ) -o $(NAME)
 
 clean : 

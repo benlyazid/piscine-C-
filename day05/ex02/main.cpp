@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 13:43:10 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/11 08:33:52 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/14 07:45:22 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,19 @@ using namespace std;
 
 int main()
 {
-	Bureaucrat buo("khalid_bureaucrat",3);
-	PresidentialPardonForm sh_form("target_file_2");
-	buo.signForm(sh_form);
-	buo.executeForm(sh_form);
-	RobotomyRequestForm r_form("r_target");
-	buo.signForm(r_form);
-	Bureaucrat exec;
-	exec.executeForm(r_form);
+	try
+	{
+		Bureaucrat buo("khalid_bureaucrat",1);
+		PresidentialPardonForm sh_form("target_file_2");
+		sh_form.beSigned(buo);
+		buo.executeForm(sh_form);
+		RobotomyRequestForm r_form("r_target");
+		buo.signForm(r_form);
+		Bureaucrat exec("exec", 110);
+		exec.executeForm(r_form);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
 }
