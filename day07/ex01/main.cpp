@@ -5,27 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/08 13:43:10 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/15 17:39:47 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/09/15 08:43:31 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/09/15 15:50:42 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "Form.hpp"
+
+#include "iter.hpp"
 
 int main()
 {
-	try
-	{
-		Bureaucrat buo("khalid_bureaucrat",52);
-		Form form2("Normal_Form", 30, 1);
-		buo.signForm(form2);
-		form2.beSigned(buo);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-	
-	
+	int table[10] = {0,1,2,3,4,5,6,7,8,9};
+	std::string table_str[10] = {"a", "b", "c", "d", "e", "f", "g", "h"};
+	iter(table_str, 8, print_element);
+	std::cout << "--------------------------------" << std::endl;
+	iter(table, 10, print_element);
+	return 0;
 }

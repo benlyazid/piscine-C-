@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Convert.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/08 13:43:10 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/15 17:39:47 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/09/12 16:22:06 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/09/14 11:20:53 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "Form.hpp"
-
-int main()
+#ifndef CONVERT_H
+#define CONVERT_H
+#include <string>
+#include <iostream>
+class Convert
 {
-	try
-	{
-		Bureaucrat buo("khalid_bureaucrat",52);
-		Form form2("Normal_Form", 30, 1);
-		buo.signForm(form2);
-		form2.beSigned(buo);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-	
-	
-}
+private:
+	std::string input;
+public:
+	Convert(std::string input);
+	~Convert();
+	Convert(const Convert &convert);
+	Convert& operator=(const Convert &convert);
+	operator char();
+	operator int();
+	operator float();
+	operator double();
+};
+
+void  convert_funct(Convert &convert);
+
+
+#endif

@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/08 13:43:10 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/15 17:39:47 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/09/15 15:49:12 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/09/16 17:55:50 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "Form.hpp"
+#ifndef ITER_H
+#define ITER_H
 
-int main()
+#include <iostream>
+#include <string>
+
+template<typename T>
+void iter(T *table, int n, void (*funct)(T))
 {
-	try
+	for (int i = 0; i < n; i++)
 	{
-		Bureaucrat buo("khalid_bureaucrat",52);
-		Form form2("Normal_Form", 30, 1);
-		buo.signForm(form2);
-		form2.beSigned(buo);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-	
-	
+		funct(table[i]);
+	}	
 }
+
+
+template <typename T>
+void print_element(T element)
+{
+	std::cout << "THE ELEMENT IS : " << element << std::endl;
+}
+
+#endif

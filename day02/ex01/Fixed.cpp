@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 16:50:48 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/04 19:02:10 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/21 08:18:00 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,6 @@ int Fixed::toInt(void)const
 
 std::ostream& operator<<(std::ostream &out, const Fixed& fixed)
 {
-    out << fixed.toFloat();
+    out << fixed.toFloat() << "   " << fixed.getRawBits();
     return out;
 }

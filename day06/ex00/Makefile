@@ -6,19 +6,19 @@
 #    By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/05 09:41:11 by kbenlyaz          #+#    #+#              #
-#    Updated: 2021/09/12 16:24:57 by kbenlyaz         ###   ########.fr        #
+#    Updated: 2021/09/14 13:59:01 by kbenlyaz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = a.out
 
-SRC =  main.cpp 
-OBJ =  main.o 
+SRC =  main.cpp Convert.cpp
+OBJ =  main.o Convert.o
 
 all : $(NAME)
 
 $(NAME) : $(SRC)
-		@clang++ -Wall -Wextra -Werror -Wshadow -Wno-shadow $(SRC) -c
+		@clang++ -Wall -Wextra -Werror -std=c++98 $(SRC) -c
 		@clang++ $(OBJ) -o $(NAME)
 
 clean : 

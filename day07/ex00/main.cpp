@@ -5,27 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/08 13:43:10 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/15 17:39:47 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/09/15 08:24:44 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/09/16 17:52:55 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "template.hpp"
 
 int main()
 {
-	try
-	{
-		Bureaucrat buo("khalid_bureaucrat",52);
-		Form form2("Normal_Form", 30, 1);
-		buo.signForm(form2);
-		form2.beSigned(buo);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-	
-	
+	int a = 2;
+	int b = 3;
+	swap( a, b );
+	std::cout << "a = " << a << ", b = " << b << std::endl;
+	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
+	std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
+	std::string c = "chaine1";
+	std::string d = "chaine2";
+	::swap(c, d);
+	std::cout << "c = " << c << ", d = " << d << std::endl;
+	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
+	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
+	return 0;
 }

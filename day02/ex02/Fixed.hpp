@@ -6,7 +6,7 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 15:56:12 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/05 10:03:51 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/21 12:50:10 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class Fixed
 		Fixed& operator=(const Fixed &fixed);
 		Fixed(const Fixed &fixed);
 		Fixed(const int number);
-		Fixed(const float number);
+	//	Fixed(const float number);
 
 		bool operator==(const Fixed  &fixed);
 		bool operator!=(const Fixed  &fixed);

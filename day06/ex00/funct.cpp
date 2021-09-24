@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   convert.h                                          :+:      :+:    :+:   */
+/*   funct.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/12 16:22:06 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/13 07:24:25 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/09/14 08:05:52 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/09/14 08:20:40 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONVERT_H
-#define CONVERT_H
-#include <string>
-#include <iostream>
-#define CHAR 1
-#define INT 2
-#define FLOAT 3
-#define DOUBLE 4
+#include "Convert.hpp"
 
-int get_type_of_input(std::string input);
-
-#endif
+int get_type_of_input(std::string input)
+{ 
+	if (is_int(input)) 
+		return INT;
+	if (is_char(input))
+		return CHAR;
+	if (is_flaot(input)) 
+		return FLOAT;
+	if (is_double(input))
+		return DOUBLE;
+	return 0;
+}

@@ -5,27 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/08 13:43:10 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/15 17:39:47 by kbenlyaz         ###   ########.fr       */
+/*   Created: 2021/09/16 12:08:11 by kbenlyaz          #+#    #+#             */
+/*   Updated: 2021/09/17 17:42:35 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "Form.hpp"
 
+#include "span.hpp"
 int main()
 {
 	try
 	{
-		Bureaucrat buo("khalid_bureaucrat",52);
-		Form form2("Normal_Form", 30, 1);
-		buo.signForm(form2);
-		form2.beSigned(buo);
+		Span sp = Span(7);
+		sp.addNumber(100);
+		sp.addNumber(20);
+		sp.addNumber(190);
+		sp.addNumber(50);
+		sp.addNumber(300);
+		sp.addNumber(1);
+		sp.addNumber(200);
+		std::cout << sp.shortestSpan() << std::endl;
+		std::cout << sp.longestSpan() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << std::endl;
+		std::cerr << e.what();
 	}
 	
-	
+
 }

@@ -6,11 +6,11 @@
 /*   By: kbenlyaz < kbenlyaz@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 13:43:10 by kbenlyaz          #+#    #+#             */
-/*   Updated: 2021/09/13 11:51:30 by kbenlyaz         ###   ########.fr       */
+/*   Updated: 2021/09/14 13:55:42 by kbenlyaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "convert.h"
+#include "Convert.hpp"
 class Objet
 {
 	private:
@@ -58,29 +58,16 @@ class Circle : public Objet
 
 };
 
-void check_util(Objet &obj)
-{
-		obj.check_fuct();
-}
-int main()
-{
-	// Objet *obj_0 = new Triangle("triangle_0"); //upcasat
-	// obj_0->colore();
-	// //obj_0->check_fuct();
 	
-	// Square *square_0 = (Square*)new Objet("objet_square"); //down cast
-	// square_0->colore();
-	// //square_0->check_fuct();
 	
-	// Circle *c_0 = (Circle*)new Triangle("Circle_by_Triangle");
-	// c_0->print_type_circle();
-	// c_0->colore();
-	// //c_0->check_fuct();
-	// Square sq2("my_square");
-	// check_util(sq2);
-	// return (0);
-	int i = 42;
-	char c = 'a';
-	float f = static_cast<float>(c);
-	std::cout << f << std::endl;
+int main(int argc, char *argv[])
+{
+	if (argc != 2)
+	{
+		std::cout << "Error in number of ARG :(\n";
+		return (1);
+	}
+	Convert convert(argv[1]);
+	convert_funct(convert);
+	return (0);
 }
